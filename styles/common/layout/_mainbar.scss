@@ -1,0 +1,10 @@
+.mainbar {
+    display: inline-block;
+    width: 100%;
+    overflow: hidden;
+    overflow-y: auto;
+    float: right;
+    @include viewport(small) {
+        width: calc(100vw - 300px);
+    }
+}

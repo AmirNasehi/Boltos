@@ -1,0 +1,150 @@
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    @include position-scale(fixed, 0, auto, auto, 0);
+    width: 300px;
+    min-height: 100vh;
+    height: calc(100% - 50px);
+    background: $blue;
+    text-transform: capitalize;
+    .side-ul {
+        background: transparent;
+        text-align: center;
+        border: none;
+        height: 100%;
+        li {
+            width: 100%;
+            padding: 8px 40px;
+            a {
+                display: flex;
+                align-items: center;
+                font-weight: 400;
+                color: $darkest_gray;
+                font-size: 12px;
+                background: rgba(187, 187, 187, 0.24);
+                border-radius: 50px;
+                padding: 10px;
+                color: #fff;
+                &:hover {
+                    color: #fff;
+                    background: rgba(187, 187, 187, 0.24);
+                }
+            }
+        }
+        .active {
+            a {
+                background: rgba(91, 197, 192, 0.53);
+                &:hover {
+                    background: rgba(91, 197, 192, 0.53);
+                }
+            }
+        }
+    }
+    .header-login {
+        // text-align: right;
+        background: #5cc4c0;
+        min-height: 4vh;
+        display: flex;
+        align-items: center;
+        // padding: 11px 9px 0;
+        color: #fff;
+        background: $green;
+        p {
+            font-size: 12px;
+        }
+    }
+    .title-login {
+        @extend .h4;
+        width: 100%;
+        font-weight: bold;
+        padding: 18px 0 2px;
+        text-align: center;
+        color: $light_gray;
+    }
+    .logout-btn {
+        text-align: center;
+        position: absolute;
+        bottom: 30px;
+        left: 100px;
+        a {
+            font-size: 12px;
+            padding: 6px 35px;
+            border: 1px solid #fff;
+            border-radius: 30px;
+            color: #fff;
+            background: $green;
+            &:hover,
+            &:active,
+            &:focus {
+                border: 1px solid #fff;
+                color: #fff;
+                background: $green;
+            }
+        }
+    }
+    p {
+        display: inline-block;
+        text-align: center;
+        width: 130px;
+        font-size: 16px;
+    }
+    .img-sentiment {
+        @extend .img-cover;
+        display: inline-block;
+        height: 40px;
+        width: 40px;
+        background-size: 63%;
+        margin-left: 8px;
+        border: 1px solid #fff;
+        border-radius: 50px;
+        vertical-align: middle;
+        background-image: url(/assets/img/sentiment-icon.png);
+    }
+    .img-home {
+        @extend .img-sentiment;
+        background-size: 73%;
+        background-image: url(/assets/img/home.png);
+    }
+    .img-faces {
+        @extend .img-sentiment;
+        background-image: url(/assets/img/faces-icon.png);
+    }
+    .img-person {
+        @extend .img-sentiment;
+        background-image: url(/assets/img/person-icon.png);
+    }
+    .img-facial {
+        @extend .img-sentiment;
+        background-size: 73%;
+        background-image: url(/assets/img/facial-icon.png);
+    }
+    .img-moderation {
+        @extend .img-sentiment;
+        background-image: url(/assets/img/moderation-icon.png);
+    }
+    .img-label {
+        @extend .img-sentiment;
+        background-size: 84%;
+        background-image: url(/assets/img/label-icon.png);
+    }
+}
+
+.navbar-inverse.header {
+    background-color: #cdc2a5;
+    border-color: #cdc2a5;
+    position: fixed;
+    top: 0;
+    z-index: 9;
+    right: 0;
+    left: 0;
+    margin: 0;
+    border-radius: 0;
+    .navbar-nav>li>a {
+        color: #fff;
+        font-size: 14px;
+        font-weight: bold;
+        &:hover {
+            color: #fff;
+        }
+    }
+}
